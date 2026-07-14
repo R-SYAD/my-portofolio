@@ -33,7 +33,7 @@ function ProjectCardBase({ item }: Props) {
   const href = getProjectHref(item)
 
   const cardInner = (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200/70 bg-white shadow-sm transition hover:shadow-md dark:border-gray-800/70 dark:bg-gray-900">
+    <article className="group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-gray-200/70 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-1 hover:ring-blue-500/25 dark:border-gray-800/70 dark:bg-gray-900">
       <div className="relative aspect-[16/9] overflow-hidden">
         <img
           src={getPreviewSrc(item)}
@@ -76,7 +76,7 @@ function ProjectCardBase({ item }: Props) {
 
   if (href && href.startsWith('/projects')) {
     return (
-      <Link to={href} className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-950">
+      <Link to={href} className="block h-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-950">
         {cardInner}
       </Link>
     )
@@ -87,7 +87,7 @@ function ProjectCardBase({ item }: Props) {
       href={href}
       target={href && !href.startsWith('/projects') ? '_blank' : undefined}
       rel={href && !href.startsWith('/projects') ? 'noreferrer noopener' : undefined}
-      className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-950"
+      className="block h-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-950"
     >
       {cardInner}
     </a>

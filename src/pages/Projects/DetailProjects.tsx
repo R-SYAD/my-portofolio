@@ -87,17 +87,7 @@ export default function DetailProjects() {
 						))}
 					</div>
 
-					<div className="mt-5 grid grid-cols-1 gap-2 text-sm">
-						{proj.detail && (
-							<a href={proj.detail} className="inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 px-3 py-2 font-semibold text-white transition hover:bg-blue-500">
-								Kunjungi Project
-							</a>
-						)}
-						{proj.repo && (
-							<a href={proj.repo} className="inline-flex items-center justify-center gap-2 rounded-md border border-gray-300 px-3 py-2 font-semibold text-gray-700 transition hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800">
-								Source Code
-							</a>
-						)}
+					<div className="mt-5 text-sm">
 						<Link to="/projects" className="inline-flex items-center justify-center gap-2 rounded-md px-3 py-2 font-semibold text-gray-700 transition hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800">
 							← Kembali ke daftar
 						</Link>
